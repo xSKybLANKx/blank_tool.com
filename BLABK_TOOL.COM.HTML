@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future Of Art</title>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.17/build/spline-viewer.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        spline-viewer {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        header {
+            color: white;
+            text-align: left;
+            padding: 20px;
+            padding-left: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1em; /* Adjust this value to drop the header down by one line */
+        }
+
+        header img {
+            max-height: 50px;
+            background-color: transparent;
+            margin-right: 2cm; /* Move the logo 2cm to the right */
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-weight: bold;
+            margin-top: 2cm; /* Move the header down by 2cm */
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            margin-left: -2cm; /* Move the buttons 2cm to the left */
+        }
+
+        .options div {
+            margin-right: 20px;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .second-header {
+            text-align: center;
+            padding: 20px;
+            margin-top: 10px;
+            color: white;
+        }
+
+        section {
+            color: white;
+            text-align: left;
+            padding: 20px;
+            padding-left: 40px;
+            max-width: 50vw;
+            overflow-wrap: break-word;
+            margin-top: 10px;
+        }
+
+        /* Hide the audio player initially */
+        audio {
+            display: none;
+        }
+
+        /* Adjust styles for smaller screens */
+        @media only screen and (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .options {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Add audio element for background music with autoplay and loop -->
+    <audio id="bgMusic" controls autoplay loop>
+        <source src="https://github.com/xSKybLANKx/Links/raw/dc8db5acd073b1cfc5d4d1b63d89a108c2f50af3/Unravel%20-%20Tokyo%20Ghoul%20OP%20%5BPiano%5D.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <spline-viewer url="https://prod.spline.design/Kgu-D8445nLv3M8a/scene.splinecode"></spline-viewer>
+
+    <header>
+        <img src="https://th.bing.com/th/id/R.f64a09cf217e5da872256e41dad8da88?rik=5nt2O%2bJ3wZPc7w&pid=ImgRaw" alt="Logo">
+        <h1>The Future Of Art</h1>
+        <div class="options">
+            <div onclick="playAudio()">Sign In</div>
+            <div onclick="playAudio()">Create New Account</div>
+        </div>
+    </header>
+
+    <div class="second-header">
+        <h2>Learn How to Create AI images with BLANK_TOOL</h2>
+    </div>
+
+    <section>
+        <h2>Generative AI, Web3 And The Immersive Internet</h2>
+        <p>The future internet is predicted to revolutionize the way we interact with the digital world — and that revolution is not just limited to gaming and social media. It has the potential to be a new frontier for artists and collectors, as well.</p>
+        <p>Artists have always been at the forefront of innovation and creativity, and the metaverse provides them with a new canvas to express themselves. The future internet will give artists the ability to create innovative new work, share their art with a global audience, and get compensated more fairly for their efforts.</p>
+        <p>Let’s dig into what future internet technology will mean for artists and collectors, explore its possibilities, and discuss how artists can adapt to this new digital world.</p>
+    </section>
+
+    <section>
+        <h2>Navigating the Intersection of Art and Web3 Technologies</h2>
+        <p>As we venture deeper into the digital age, the canvas of creativity is becoming increasingly virtual. Artists, no longer confined to the traditional tools and spaces of their craft, are exploring and embracing new technologies that redefine their creative boundaries. In the forefront of this avant-garde movement are Web3 technologies — a set of decentralized, blockchain-based systems that promise to reconfigure the contours of artistic creation, ownership, and consumption.</p>
+        <p>Here are three of the biggest ways web3 technologies — particularly NFTs — will enable artists to take back control of their art, including how they get paid and how their work is used:</p>
+        <ul>
+            <li>With NFTs and automatically executing smart contracts, artists can receive a portion of the sale every time their work is sold and resold among collectors.</li>
+            <li>Blockchain records will potentially add value to pieces of NFT artwork because artists and collectors will be able to see where each piece of art came from and who has owned it since it was initially sold.</li>
+            <li>Digital art will create a new class of assets that will be a better fit for people who live in the digital world just as much as they do in the physical world.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Harnessing the AI Revolution in Art</h2>
+        <p>Among the transformative forces in the art world, generative AI has emerged as a tool of extraordinary potential. At the intersection of technology and creativity, generative AI algorithms function as virtual collaborators, assisting artists in creating artworks of unique aesthetic value.</p>
+    </section>
+
+    <script>
+        function playAudio() {
+            const bgMusic = document.getElementById('bgMusic');
+            bgMusic.play().then(() => {
+                // Audio playback started successfully
+                console.log('Audio playback started');
+            }).catch((error) => {
+                // Audio playback failed
+                console.error('Audio playback failed:', error);
+            });
+        }
+
+        // Play audio on any mouse movement
+        document.addEventListener('wheel', playAudio);
+
+        // Play audio on any touchstart event (e.g., tapping on a mobile phone)
+        document.addEventListener('touchstart', playAudio);
+
+        // Play audio on any touchmove event (e.g., scrolling on a phone)
+        document.addEventListener('touchmove', playAudio);
+    </script>
+
+</body>
+
+</html>
